@@ -27,14 +27,13 @@
 <body>
 <!-- style = "padding: 15em 2em 10em;"     -->
     <header>
-        <img src="assets/logo.jpg" alt="immnews logo">
+        <img src="assets/logo.jpg" alt="wisp logo">
         <nav>
             <ul>
-                <li><a href="admin-dashboard.php">Articles</a></li>
-                <li><a href="about-page.php">About</a></li>
+                <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="login.php">Login</a></li>
-                <li><a href="register-form.php">Register</a></li>
+                <li><a href="register.php">Register</a></li>
 
                 <!-- <li><a href="admin-dashboard.php">Dashboard</a></li>
 			    <li><a href="logout.php">logout</a></li> -->
@@ -46,7 +45,7 @@
                 // }
                 //session_start();
                 if(isset($_SESSION["personId"])){
-                    echo ("<li><a href='admin-dashboard.php'>Dashboard</a></li>");
+                    echo ("<li><a href='dashboard.php'>Dashboard</a></li>");
                     echo("<li><a href='logout.php'>logout</a></li>");
             
                 }
@@ -55,4 +54,4 @@
         </nav>
     </header>
 
-<button id="toggle">Reading Assistance</button>
+<!-- <button id="toggle">Reading Assistance</button> -->
