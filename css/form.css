@@ -1,1 +1,12 @@
 /* form.css */
+input {
+    display: inline-block;
+}
+label{
+    display: inline-block;
+
+}
+
+form{
+    background-color: tan;
+}
