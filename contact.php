@@ -16,8 +16,8 @@ include("includes/header.php");
     <label for="email">Email</label>
     <input id="email" type="email" name="email" placeholder="pineapple@thesea.com" required>
     <label for="message">Message</label>
-    <input id="message" type="textarea">
-    <button type="submit">Send</button>
+    <textarea name="message" id="message" cols="30" rows="10" placeholder="Hello, we'd love to hear from you!"></textarea> <br>
+    <button type="submit">Send</button> 
     </form>
     <script src="js/contact-ajax.js"></script>
 
