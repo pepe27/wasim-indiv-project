@@ -1,12 +1,24 @@
 /* form.css */
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Work Sans', sans-serif; 
+}
 input {
-    display: inline-block;
+    display: block;
 }
 label{
-    display: inline-block;
+    display: block;
 
+}
+
+section{
+    background-color: tan;
+    padding: 3rem;
+    border-radius: 15px 50px;
+    border: .1rem solid black;
 }
 
 form{
-    background-color: tan;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Work Sans', sans-serif;
 }

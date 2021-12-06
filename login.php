@@ -1,5 +1,5 @@
 <?php 
-// index.php
+// login.php
 // login-in form 
 include("includes/header.php");
 ?>
