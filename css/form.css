@@ -11,7 +11,7 @@ label{
 
 }
 
-section{
+section[id="loginForm"]{
     background-color: tan;
     padding: 3rem;
     border-radius: 15px 50px;

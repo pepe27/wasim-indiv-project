@@ -31,9 +31,9 @@
 <body>
 <!-- style = "padding: 15em 2em 10em;"     -->
     <header>
-        <img src="assets/wisp-favicon.png" alt="wisp logo" id="logo">
         <nav>
             <ul>
+                <li><img src="assets/wisp-favicon.png" alt="wisp logo" id="logo"></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="login.php">Login</a></li>

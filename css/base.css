@@ -1,5 +1,9 @@
 /* base.css */
 #logo{
-    width: 10%;
-    display: inline;
+    width: 80px;
+    display: inline-block;
 }
+
+nav ul li{
+    display: inline-block; 
+} 

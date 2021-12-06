@@ -34,7 +34,7 @@ include("includes/header.php");
     <input type="text" name="email" required>
     <label for="dob">Dob</label>
     <input type="text" name="dob" required>
-    <input type="submit" name="submit">
+    <button type="submit">Register</button>
     </form>
 </section>
 
