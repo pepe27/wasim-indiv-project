@@ -1,5 +1,5 @@
 <?php 
-//add-post.php
+//edit-post.php
 ?>
 
 <?php
@@ -8,16 +8,13 @@
 
 include("includes/header.php");
 ?>
-<title>Add Post</title>
-<h1>New day, New post</h1>
+<title>Edit Post</title>
+<h1>Change is good</h1>
 
 <section id="addPostForm">
-<form method="POST" action="process-add-post.php">
+<form method="POST" action="process-edit-post.php">
     <label for="Title">Title</label>
 	<input type="text" name="Title" placeholder="Untitled">
-
-    <label for="Date">Date</label>
-    <input type="date" name="Date">
 
     <label for="imageUrl">Image URL</label>
     <input type="text" name="imageUrl" placeholder="url">
@@ -25,8 +22,7 @@ include("includes/header.php");
     <label for="name1">Text</label>
     <textarea name="text" id="text" cols="30" rows="10" placeholder="How's your day going?"></textarea> <br>
    
-	<button type="submit">Post</button>
-    <button type="reset">Reset</button> 
+	<button type="submit">Edit</button>
 </form>
 </section>
 
