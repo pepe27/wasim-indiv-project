@@ -1,9 +1,16 @@
 /* base.css */
+* {
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Work Sans', sans-serif; 
+}
+
 #logo{
     width: 80px;
     display: inline-block;
 }
 
 nav ul li{
-    display: inline-block; 
+    display: inline-block;
+    padding: 0rem .5rem;
+    
 } 
