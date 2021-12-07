@@ -4,7 +4,7 @@
 
 <?php
 session_start();
-if(!isset($_SESSION["personId"])){
+if(!isset($_SESSION["id"])){
 	?><p>Unknown user! </p>
 	<a href="login.php">Back to login page</a>
 	<?php

@@ -4,7 +4,7 @@
 
 <?php
 
-//include("includes/session-check.php");
+include("includes/session-check.php");
 
 include("includes/header.php");
 ?>

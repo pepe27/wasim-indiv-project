@@ -5,7 +5,7 @@
 
 <?php
 
-//include("includes/session-check.php");
+include("includes/session-check.php");
 
 include("includes/header.php");
 ?>
@@ -17,7 +17,7 @@ include("includes/header.php");
 <!-- do an onclick event -->
 
 <section>
-    
+
 </section>
 
 

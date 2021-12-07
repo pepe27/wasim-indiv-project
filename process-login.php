@@ -19,7 +19,7 @@ if($row = $stmt->fetch()){
 	
 	//header("Location:admin-dashboard.php");
 	
-	$_SESSION["personId"] = $row["personId"];
+	$_SESSION["id"] = $row["id"];
 	$_SESSION["username"] = $row["username"];
     //$_SESSION["isAdmin"] = $row["isAdmin"];
 
