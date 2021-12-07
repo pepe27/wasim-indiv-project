@@ -14,7 +14,7 @@ $dob = $_POST["dob"];
 include("includes/db-connect.php"); 
 
 //prepare
-$stmt = $pdo->prepare("INSERT INTO `users` (`personId`, `username`, `password`, `isAdmin`, `firstName`, `lastName`, `dob`) VALUES (NULL, '$username', '$password', '0', '$firstName', '$lastName', '$dob');");
+$stmt = $pdo->prepare("INSERT INTO `users` (`personId`, `username`, `password`, `nickname`, `email`, `dob`) VALUES (NULL, '$username', '$password', '$nickname', '$email', '$dob');");
 
 
 //execute
