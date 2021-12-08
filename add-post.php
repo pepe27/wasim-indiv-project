@@ -24,6 +24,8 @@ include("includes/header.php");
 
     <label for="textBox">Text</label>
     <textarea name="textBox" id="textBox" cols="30" rows="10" placeholder="How's your day going?"></textarea> <br>
+<!-- hidden userId value -->
+    <input type="hidden" name="userId" value="<?= $_SESSION["id"] ?>">
    
 	<button type="submit">Post</button>
     <button type="reset">Reset</button> 

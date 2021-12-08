@@ -26,8 +26,8 @@ include("includes/db-connect.php");
 
 //prepare
 $stmt = $pdo->prepare("SELECT * FROM `posts`");
-
-$currentUser = $pdo->prepare("SELECT * FROM `posts` WHERE id='$id'");
+//////////////////////////////////
+$currentUser = $pdo->prepare("SELECT * FROM `users-posts` WHERE userId='$id'");
 
 //execute
 $stmt->execute();
@@ -38,7 +38,7 @@ $currentUser->execute();
 
 while($row = $stmt->fetch()) { 
 
-    $id = $row["id"];
+    $articleId = $row["id"]; //////////////
     
     ?> 
     <p>

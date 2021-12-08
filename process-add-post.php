@@ -10,6 +10,7 @@ $title = $_POST["title"];
 $date = $_POST["date"];
 $imageUrl = $_POST["imageUrl"];
 $textBox = $_POST["textBox"];
+$userId = $_POST["userId"]; ////
 //$isFeatured = $_POST["isFeatured"];
 
 
@@ -21,7 +22,7 @@ include("includes/db-connect.php");
 //prepare
 // $stmt = $pdo->prepare("INSERT INTO `immnews-article` (`personId`, `articleTitle`, `articleDate`, `articleAuthor`, `articleText`, `isFeatured`) VALUES (NULL, '$articleTitle', '$articleDate', '$articleAuthor', '$articleText', '$isFeatured');");
 
-$stmt = $pdo->prepare("INSERT INTO `posts` (`id`, `title`, `date`, `imageUrl`, `textBox`) VALUES (NULL, '$title', '$date', '$imageUrl', '$textBox');");
+$stmt = $pdo->prepare("INSERT INTO `posts` (`id`, `title`, `date`, `imageUrl`, `textBox`,`userId`) VALUES (NULL, '$title', '$date', '$imageUrl', '$textBox', '$userId');");
 
 
 
