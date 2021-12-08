@@ -19,7 +19,7 @@ $stmt = $pdo->prepare("INSERT INTO `users` (`id`, `username`, `password`, `nickn
 
 //execute
 if($stmt->execute() == true){
-	header("Location: dashboard.php");
+	header("Location: login.php");
 }else{
 	echo("Oops. Something went wrong");
 	?>
