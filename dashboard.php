@@ -52,21 +52,20 @@ while($row = $stmt->fetch()) {
 	echo("<br/>");
 	echo($row["imageUrl"]);
 	echo("<br/>");
-    echo($row["text"]);
+    echo($row["textBox"]);
     echo("<br/>");
 	?>
-
-    <?php
-    
- ?>
+    </p>
+    <!-- EDIT -->
     <a href="edit-post.php?id=<?php echo($row["id"]); ?>">Edit Entry</a>
 
+    <!-- one-button click DELETE post -->
     <form method="POST" action="delete-post.php">
     <input type="hidden" name="id" value="<?= $row["id"] ?>">
     <input type="submit" name="deleteArticle" value="Delete Article">
     </form>
 
-	</p><?php    
+	<?php    
 }
 ?>
 

@@ -5,7 +5,6 @@ $id = $_GET["id"];
 // $id = $_POST["id"];
 include("includes/header.php");
 
-
 ?>
 
 <title>Edit Post</title>
@@ -47,20 +46,20 @@ $row = $stmt->fetch();
 ?>
 
 <section id="editPostForm">
-<form method="POST" action="process-edit-post.php">
-    <input type="hidden" name="id" value="<?= $row["id"] ?>">
+    <form method="POST" action="process-edit-post.php">
+        <input type="hidden" name="id" value="<?= $row["id"] ?>">
 
-    <label for="title">Title</label>
-    <input type="text" name="title" value="<?= $row["title"] ?>">
+        <label for="title">Title</label>
+        <input type="text" name="title" value="<?= $row["title"] ?>">
 
-    <label for="imageUrl">Image URL</label>
-    <input type="text" name="imageUrl" value="<?= $row["imageUrl"] ?>">
+        <label for="imageUrl">Image URL</label>
+        <input type="text" name="imageUrl" value="<?= $row["imageUrl"] ?>">
 
-    <label for="text">Text</label>
-    <textarea name="text" id="text" cols="30" rows="10" value="<?= $row["text"] ?>"></textarea> <br>
-   
-	<button type="submit">Edit</button>
-</form>
+        <label for="textBox">Text</label>
+        <textarea name="textBox" id="textBox" cols="30" rows="10" value="<?= $row["text"] ?>"></textarea> <br>
+        <input type="submit">
+        <!-- <button type="submit">Edit</button> -->
+    </form>
 </section>
 
 <?php

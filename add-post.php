@@ -22,8 +22,8 @@ include("includes/header.php");
     <label for="imageUrl">Image URL</label>
     <input type="text" name="imageUrl" placeholder="url">
 
-    <label for="text">Text</label>
-    <textarea name="text" id="text" cols="30" rows="10" placeholder="How's your day going?"></textarea> <br>
+    <label for="textBox">Text</label>
+    <textarea name="textBox" id="textBox" cols="30" rows="10" placeholder="How's your day going?"></textarea> <br>
    
 	<button type="submit">Post</button>
     <button type="reset">Reset</button> 

@@ -9,7 +9,7 @@ include("includes/session-check.php");
 $title = $_POST["title"];
 $date = $_POST["date"];
 $imageUrl = $_POST["imageUrl"];
-$text = $_POST["text"];
+$textBox = $_POST["textBox"];
 //$isFeatured = $_POST["isFeatured"];
 
 
@@ -21,7 +21,7 @@ include("includes/db-connect.php");
 //prepare
 // $stmt = $pdo->prepare("INSERT INTO `immnews-article` (`personId`, `articleTitle`, `articleDate`, `articleAuthor`, `articleText`, `isFeatured`) VALUES (NULL, '$articleTitle', '$articleDate', '$articleAuthor', '$articleText', '$isFeatured');");
 
-$stmt = $pdo->prepare("INSERT INTO `posts` (`id`, `title`, `date`, `imageUrl`, `text`) VALUES (NULL, '$title', '$date', '$imageUrl', '$text');");
+$stmt = $pdo->prepare("INSERT INTO `posts` (`id`, `title`, `date`, `imageUrl`, `textBox`) VALUES (NULL, '$title', '$date', '$imageUrl', '$textBox');");
 
 
 
