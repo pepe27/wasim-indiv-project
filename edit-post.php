@@ -56,9 +56,9 @@ $row = $stmt->fetch();
         <input type="text" name="imageUrl" value="<?= $row["imageUrl"] ?>">
 
         <label for="textBox">Text</label>
-        <textarea name="textBox" id="textBox" cols="30" rows="10" value="<?= $row["text"] ?>"></textarea> <br>
-        <input type="submit">
-        <!-- <button type="submit">Edit</button> -->
+        <textarea name="textBox" id="textBox" cols="30" rows="10" value="<?= $row["textBox"] ?>"></textarea> <br>
+        <!-- <input type="submit"> -->
+        <button type="submit">Edit</button>
     </form>
 </section>
 
