@@ -13,16 +13,16 @@ include("includes/header.php");
 
 <section id="addPostForm">
 <form method="POST" action="process-add-post.php">
-    <label for="Title">Title</label>
-	<input type="text" name="Title" placeholder="Untitled">
+    <label for="title">Title</label>
+	<input type="text" name="title" placeholder="Untitled">
 
-    <label for="Date">Date</label>
-    <input type="date" name="Date">
+    <label for="date">Date</label>
+    <input type="date" name="date">
 
     <label for="imageUrl">Image URL</label>
     <input type="text" name="imageUrl" placeholder="url">
 
-    <label for="name1">Text</label>
+    <label for="text">Text</label>
     <textarea name="text" id="text" cols="30" rows="10" placeholder="How's your day going?"></textarea> <br>
    
 	<button type="submit">Post</button>
