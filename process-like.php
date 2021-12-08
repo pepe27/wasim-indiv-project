@@ -28,24 +28,24 @@ include("includes/db-connect.php");
 
 if ($ifLike == 1) {
     //prepare
-    $stmt = $pdo->prepare("INSERT INTO `immnews-user-article` (`userArticleId`, `userId`, `articleId`) VALUES (NULL, '$userId', '$articleId');");
+    $stmt = $pdo->prepare("INSERT INTO `users-posts` (`id`, `userId`, `postId`) VALUES (NULL, '$userId', '$articleId');");
 
     // INSERT INTO `immnews-user-article` (`userArticleId`, `userId`, `articleId`) VALUES (NULL, '$userId', '$articleId');
 
     if($stmt->execute() == true){
         ?> 
         <?php
-        header("Location: admin-dashboard.php");
+        header("Location: dashboard.php");
     } else {
         ?>
         <p>Error</p>
-        <a href="admin-dashboard.php">Back To Articles Dashboard</a>
+        <a href="dashboard.php">Back To Dashboard</a>
         <?php
     }
 } 
 else {
         //prepare
-        $stmt = $pdo->prepare("DELETE FROM `immnews-user-article` WHERE `immnews-user-article`.`articleId` = $articleId AND `immnews-user-article`.`userId` = $userId");
+        $stmt = $pdo->prepare("DELETE FROM `users-posts` WHERE `users-posts`.`postId` = $articleId AND `users-posts`.`userId` = $userId");
 
         // $stmt = $pdo->prepare("DELETE FROM `immnews-user-article` WHERE `immnews-user-article`.`userArticleId` = $userArticleId");
         

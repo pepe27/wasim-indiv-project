@@ -42,7 +42,7 @@ $currentUser->execute();
 
 while($row = $stmt->fetch()) { 
 
-    $articleId = $row["id"]; //////////////////////////////////
+    $articleId = $row["id"]; ////////////This is the LIKE functionality code.
     
     //count number of likes on article(???)   userId   postId 	
     $st = $pdo->prepare("SELECT * FROM `users-posts` WHERE `users-posts`.`postId` = $articleId;");
