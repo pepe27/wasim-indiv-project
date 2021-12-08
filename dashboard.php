@@ -16,21 +16,10 @@ $isAdmin = $_SESSION["isAdmin"];
 <h2><a id="showPosts" href="javascript:;">Click to show more posts</a></h2> 
 <!-- do an onclick event -->
 
-<section>
-
-</section>
+<section> </section>
 
 
 <?php
-//showing Add New Article Functionality for Admin User
-// if ( $isAdmin == '1') { ?>
-//     <h2>Admin Panel</h2>
-//     <a href="#">Does Nothing Right now</a>
-//     <br> <br>
-//     <?php   
-// }
-
-
 //retrieve and display posts
 //connect
 include("includes/db-connect.php"); 
@@ -44,7 +33,6 @@ $currentUser = $pdo->prepare("SELECT * FROM `posts` WHERE id='$id'");
 $stmt->execute();
 $currentUser->execute();
 
-$waffle =  $currentUser->fetch();
 
 //display results
 
@@ -53,22 +41,16 @@ while($row = $stmt->fetch()) {
     $id = $row["id"];
     
     ?> 
-
     <p>
-
     <?php
 
-    // if ($row["isFeatured"] == '1') {  
-    //     echo("<b>FEATURED ARTICLE!</b> ");
-    //     echo("<br/>");
-    // }
 	echo($row["id"]);
 	echo("<br/>");
 	echo($row["title"]);
 	echo("<br/>");
 	echo($row["date"]);
 	echo("<br/>");
-	echo($row["imgUrl"]);
+	echo($row["imageUrl"]);
 	echo("<br/>");
     echo($row["text"]);
     echo("<br/>");
@@ -77,13 +59,8 @@ while($row = $stmt->fetch()) {
     <?php
     
  ?>
-        <a href="edit-post.php?personId=<?php echo($row["id"]); ?>">Edit Entry</a> <?php
-        ?>
+    <a href="edit-post.php?id=<?php echo($row["id"]); ?>">Edit Entry</a>
 
-            <form method="POST" action="process-edit-post.php">
-                <input type="hidden" name="id" value="<?= $row["id"] ?>">
-                <input type="submit" name="isFeatured" value="Feature">
-            </form>
 
         <form method="POST" action="delete-post.php">
         <input type="hidden" name="id" 

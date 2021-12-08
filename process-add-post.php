@@ -19,9 +19,9 @@ $text = $_POST["text"];
 include("includes/db-connect.php"); 
 
 //prepare
-$stmt = $pdo->prepare("INSERT INTO `immnews-article` (`personId`, `articleTitle`, `articleDate`, `articleAuthor`, `articleText`, `isFeatured`) VALUES (NULL, '$articleTitle', '$articleDate', '$articleAuthor', '$articleText', '$isFeatured');");
+// $stmt = $pdo->prepare("INSERT INTO `immnews-article` (`personId`, `articleTitle`, `articleDate`, `articleAuthor`, `articleText`, `isFeatured`) VALUES (NULL, '$articleTitle', '$articleDate', '$articleAuthor', '$articleText', '$isFeatured');");
 
-$stmt = $pdo->prepare("INSERT INTO `posts` (`id`, `title`, `date`, `imgUrl`, `text`) VALUES (NULL, '$title', '$date', '$imageUrl', '$text');");
+$stmt = $pdo->prepare("INSERT INTO `posts` (`id`, `title`, `date`, `imageUrl`, `text`) VALUES (NULL, '$title', '$date', '$imageUrl', '$text');");
 
 
 
