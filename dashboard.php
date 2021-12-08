@@ -26,7 +26,8 @@ include("includes/db-connect.php");
 
 //prepare
 //for the Admin Account only
-// $stmt = $pdo->prepare("SELECT * FROM `posts`"); 
+// $stmt = $pdo->prepare("SELECT * FROM `posts`");
+
 //only show the Posts the Current User Makes
 $stmt = $pdo->prepare("SELECT * FROM `posts` WHERE userId='$id'"); 
 
@@ -37,13 +38,35 @@ $currentUser = $pdo->prepare("SELECT * FROM `users-posts` WHERE userId='$id'");
 $stmt->execute();
 $currentUser->execute();
 
-
 //display results
 
 while($row = $stmt->fetch()) { 
 
-    $articleId = $row["id"]; //////////////
+    $articleId = $row["id"]; //////////////////////////////////
     
+    //count number of likes on article(???)   userId   postId 	
+    $st = $pdo->prepare("SELECT * FROM `users-posts` WHERE `users-posts`.`postId` = $articleId;");
+    $st->execute();
+    $like = $st -> fetchAll();
+    $likes = count($like);
+
+    $user = $pdo->prepare("SELECT * FROM `users-posts` WHERE `users-posts`.`userId` = $id AND `users-posts`.`postId` = $articleId");
+    $user->execute();
+    $userLike = $user->fetch();
+
+    //show either like or unlike button, with counter of number of current likes
+    if ($userLike){
+        ?> 
+        <a href="process-like.php?userId=<?= $_SESSION["id"]; ?>&articleId=<?= $row["id"]; ?> &like=0">Unlike(<?php echo("number of like: $likes") ?>)</a>
+        <?php
+    } else {
+        ?>
+        <a href="process-like.php?userId=<?= $_SESSION["id"]; ?>&articleId=<?= $row["id"]; ?> &like=1">Like(<?php echo("number of like: $likes") ?>)</a>
+        <?php 
+    }
+
+
+    //////////////////////////////////
     ?> 
     <p>
     <?php
