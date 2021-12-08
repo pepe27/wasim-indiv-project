@@ -25,7 +25,11 @@ $isAdmin = $_SESSION["isAdmin"];
 include("includes/db-connect.php"); 
 
 //prepare
-$stmt = $pdo->prepare("SELECT * FROM `posts`");
+//for the Admin Account only
+// $stmt = $pdo->prepare("SELECT * FROM `posts`"); 
+//only show the Posts the Current User Makes
+$stmt = $pdo->prepare("SELECT * FROM `posts` WHERE userId='$id'"); 
+
 //////////////////////////////////
 $currentUser = $pdo->prepare("SELECT * FROM `users-posts` WHERE userId='$id'");
 
