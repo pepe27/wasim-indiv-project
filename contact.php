@@ -8,8 +8,8 @@ include("includes/header.php");
     <h1>Contact Us</h1>
     <section id="formStatus"> </section> 
 
-    <p id="instruction">Please fill out the form below!</p>
     <form id="ajaxForm" action="process-contact.php" method="POST">
+    <p id="instruction">Please fill out the form below!</p>
         <label for="name1">Name</label>
         <input id="name1" type="text" name="name1" placeholder="Spongebob" required>
         <label for="email">Email</label>

@@ -30,7 +30,7 @@ function doSomething(e){
             var response = JSON.parse(xhr.responseText);  
 			//DOM Manipulation
 			if(response.success) {
-                formStatus.innerHTML = "Thanks for submitting your form!";
+                formStatus.innerHTML = "Thanks for submitting your form! <input type='button' value='Go Back' onclick='history.back(-1)' />";
                 ajaxForm.remove(); //can do as well
             }
 		} 
