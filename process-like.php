@@ -16,7 +16,7 @@ include("includes/header.php");
 // $userId = $_POST["userId"];
 $userId = $_SESSION["id"];
 
-$articleId = $_GET["postId"];
+$postId = $_GET["postId"];
 //$articleId = $row["personId"];
 
 $ifLike = $_GET["like"];
@@ -28,7 +28,7 @@ include("includes/db-connect.php");
 
 if ($ifLike == 1) {
     //prepare
-    $stmt = $pdo->prepare("INSERT INTO `users-posts` (`id`, `userId`, `postId`) VALUES (NULL, '$userId', '$articleId');");
+    $stmt = $pdo->prepare("INSERT INTO `users-posts` (`id`, `userId`, `postId`) VALUES (NULL, '$userId', '$postId');");
 
     // INSERT INTO `immnews-user-article` (`userArticleId`, `userId`, `articleId`) VALUES (NULL, '$userId', '$articleId');
 
@@ -45,7 +45,7 @@ if ($ifLike == 1) {
 } 
 else {
         //prepare
-        $stmt = $pdo->prepare("DELETE FROM `users-posts` WHERE `users-posts`.`postId` = $articleId AND `users-posts`.`userId` = $userId");
+        $stmt = $pdo->prepare("DELETE FROM `users-posts` WHERE `users-posts`.`postId` = $postId AND `users-posts`.`userId` = $userId");
 
         // $stmt = $pdo->prepare("DELETE FROM `immnews-user-article` WHERE `immnews-user-article`.`userArticleId` = $userArticleId");
         
