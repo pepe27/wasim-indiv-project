@@ -61,16 +61,10 @@ while($row = $stmt->fetch()) {
  ?>
     <a href="edit-post.php?id=<?php echo($row["id"]); ?>">Edit Entry</a>
 
-
-        <form method="POST" action="delete-post.php">
-        <input type="hidden" name="id" 
-                value="<?= $row["id"] ?>">
-                <input type="submit" name="deleteArticle" value="Delete Article">
-        </form>
-        <?php
-
-        
-     ?>
+    <form method="POST" action="delete-post.php">
+    <input type="hidden" name="id" value="<?= $row["id"] ?>">
+    <input type="submit" name="deleteArticle" value="Delete Article">
+    </form>
 
 	</p><?php    
 }
