@@ -4,6 +4,11 @@ include("includes/session-check.php");
 include("includes/header.php");
 ?>
 
+<?php
+$id = $_SESSION["id"];
+$isAdmin = $_SESSION["isAdmin"];
+?>
+
 <title>Dashboard</title>
 <h1>Your Latest Posts</h1>
 <h2><a href="add-post.php">Add Post</a></h2>
@@ -15,6 +20,91 @@ include("includes/header.php");
 
 </section>
 
+
+<?php
+//showing Add New Article Functionality for Admin User
+// if ( $isAdmin == '1') { ?>
+//     <h2>Admin Panel</h2>
+//     <a href="#">Does Nothing Right now</a>
+//     <br> <br>
+//     <?php   
+// }
+
+
+//retrieve and display posts
+//connect
+include("includes/db-connect.php"); 
+
+//prepare
+$stmt = $pdo->prepare("SELECT * FROM `posts`");
+
+$currentUser = $pdo->prepare("SELECT * FROM `posts` WHERE id='$id'");
+
+//execute
+$stmt->execute();
+$currentUser->execute();
+
+$waffle =  $currentUser->fetch();
+
+//display results
+
+while($row = $stmt->fetch()) { 
+
+    $id = $row["id"];
+    
+    ?> 
+
+    <p>
+
+    <?php
+
+    // if ($row["isFeatured"] == '1') {  
+    //     echo("<b>FEATURED ARTICLE!</b> ");
+    //     echo("<br/>");
+    // }
+	echo($row["id"]);
+	echo("<br/>");
+	echo($row["title"]);
+	echo("<br/>");
+	echo($row["date"]);
+	echo("<br/>");
+	echo($row["imgUrl"]);
+	echo("<br/>");
+    echo($row["text"]);
+    echo("<br/>");
+	?>
+
+    <?php
+    
+ ?>
+        <a href="edit-post.php?personId=<?php echo($row["id"]); ?>">Edit Entry</a> <?php
+        ?>
+
+            <form method="POST" action="process-edit-post.php">
+                <input type="hidden" name="id" value="<?= $row["id"] ?>">
+                <input type="submit" name="isFeatured" value="Feature">
+            </form>
+
+        <form method="POST" action="delete-post.php">
+        <input type="hidden" name="id" 
+                value="<?= $row["id"] ?>">
+                <input type="submit" name="deleteArticle" value="Delete Article">
+        </form>
+        <?php
+
+        
+     ?>
+
+	</p><?php    
+}
+?>
+
+<hr>
+<div id="visitors">
+        <h2>Site Vistors for Past 6 Months</h2>
+        <table id="siteVisitors">
+        </table>
+</div>
 
 <?php
 include("includes/footer.php");

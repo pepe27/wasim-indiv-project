@@ -3,6 +3,8 @@
 include("includes/session-check.php");
 include("includes/header.php");
 $id = $_GET["id"];
+// $id = $_POST["id"];
+
 ?>
 
 <title>Edit Post</title>
