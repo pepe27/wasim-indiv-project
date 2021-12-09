@@ -21,9 +21,7 @@ $isAdmin = $_SESSION["isAdmin"];
 include("includes/db-connect.php"); 
 
 //prepare
-
-//only show the Posts the Current User Makes
-// $stmt = $pdo->prepare("SELECT * FROM `posts` WHERE userId='$id'");
+//only show the Posts the Current User has Liked
 $stmt = $pdo->prepare("SELECT `posts`.* FROM `posts` , `users-posts` WHERE `posts`.`id` = `users-posts`.`postId`;"); 
 
 //////////////////////////////////
@@ -39,7 +37,7 @@ while($row = $stmt->fetch()) {
 
     $postId = $row["id"]; ////////////This is the LIKE functionality code.
     
-    //count number of likes on post(???)   userId   postId 	
+    //count number of likes on post   userId   postId 	
     $st = $pdo->prepare("SELECT * FROM `users-posts` WHERE `users-posts`.`postId` = $postId;");
     $st->execute();
     $like = $st -> fetchAll();
@@ -52,11 +50,11 @@ while($row = $stmt->fetch()) {
     //show either like or unlike button, with counter of number of current likes
     if ($userLike){
         ?> 
-        <a href="process-like.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=0">Unlike(<?php echo("number of like: $likes") ?>)</a>
+        <a href="process-like-fav.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=0">Unlike(<?php echo("number of like: $likes") ?>)</a>
         <?php
     } else {
         ?>
-        <a href="process-like.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=1">Like(<?php echo("number of like: $likes") ?>)</a>
+        <a href="process-like-fav.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=1">Like(<?php echo("number of like: $likes") ?>)</a>
         <?php 
     }
 
