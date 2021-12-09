@@ -11,7 +11,15 @@ $isAdmin = $_SESSION["isAdmin"];
 
 <title>Your Favourite Posts</title>
 <h1>Your Favourite Posts</h1>
-<h2>Total Count: ###</h2>
+<!-- <h2>Total Count: aNumber</h2> -->
+
+<!-- Random slogan generator -->
+<?php
+    $f_contents = file ("includes/slogans.txt");
+    $line = $f_contents[array_rand ($f_contents)];
+    echo ("<h2>$line</h2>");
+?>
+
 <section></section>
 <!-- HOW TO IMPLEMENT? LOOK AT THE A1/A2 CODE FOR LIKES / SET FEATURED ARTICLE (except CAN have multiple favourite? How to design the DB??) -->
 
@@ -47,7 +55,7 @@ while($row = $stmt->fetch()) {
     $user->execute();
     $userLike = $user->fetch();
 
-    //show either like or unlike button, with counter of number of current likes
+    //show either like or unlike button, with counter of number of current likes. Note: update-like-fav.php does not redirect to dashboard.php
     if ($userLike){
         ?> 
         <a href="process-like-fav.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=0">Unlike(<?php echo("number of like: $likes") ?>)</a>
@@ -62,8 +70,8 @@ while($row = $stmt->fetch()) {
     //////////////////////////////////
     ?> 
     <p>
+    
     <?php
-
 	echo($row["id"]);
 	echo("<br/>");
 	echo($row["title"]);

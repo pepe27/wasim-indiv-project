@@ -11,11 +11,16 @@ $isAdmin = $_SESSION["isAdmin"];
 
 <title>Dashboard</title>
 <h1>Your Latest Posts</h1>
-<h2><a href="add-post.php">Add Post</a></h2>
+<!-- Random slogan generator -->
+<?php
+    $f_contents = file ("includes/slogans.txt");
+    $line = $f_contents[array_rand ($f_contents)];
+    echo ("<h2>$line</h2>");
+?>
 
-<h2><a id="showPosts" href="javascript:;">Click to show more posts</a></h2> 
 <!-- do an onclick event -->
-
+<h2><a id="showPosts" href="javascript:;">Click to show more posts</a></h2> 
+<h2><a href="add-post.php">Add Post</a></h2>
 <h2><a href="favourites.php">Favourites/Likes</a></h2>
 <section> </section>
 

@@ -4,8 +4,14 @@
 include("includes/header.php");
 ?>
 <title>Wisp Login</title>
+<h1>Login</h1>
+<!-- Random slogan generator -->
+<?php
+    $f_contents = file ("includes/slogans.txt");
+    $line = $f_contents[array_rand ($f_contents)];
+    echo ("<h2>$line</h2>");
+?>
 
-<h1>Brevity is the soul of wit</h1>
 <section id="loginForm">
 <form action="process-login.php" method="POST">
 <label for="username">Username</label>
