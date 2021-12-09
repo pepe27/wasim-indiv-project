@@ -1,5 +1,25 @@
+nav {
+    position: fixed;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background: #9892C7;
+}
+
 nav ul {
     /* font-family: 'Dazzle Unicase', sans-serif;  */
     font-family: 'dazzle-unicase', sans-serif;
-    font-style: normal;
+    /* font-style: normal; */
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 0rem .5rem;
+}
+
+#logo{
+    width: 80px;
+    display: inline-block;
 }

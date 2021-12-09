@@ -74,9 +74,9 @@ while($row = $stmt->fetch()) {
 
     //////////////////////////////////
     ?> 
-    <p>
+    <!-- <p> -->
+    <section class="dbOutput">
     <?php
-
 	echo($row["id"]);
 	echo("<br/>");
 	echo($row["title"]);
@@ -88,7 +88,8 @@ while($row = $stmt->fetch()) {
     echo($row["textBox"]);
     echo("<br/>");
 	?>
-    </p>
+    </section>
+    <!-- </p> -->
     <!-- EDIT -->
     <a href="edit-post.php?id=<?php echo($row["id"]); ?>">Edit Entry</a>
 
