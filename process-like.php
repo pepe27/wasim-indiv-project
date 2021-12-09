@@ -1,27 +1,18 @@
 <?php 
 //update-like.php 
 include("includes/session-check.php");
-include("includes/header.php");
-// if(isset($_GET["personId"]) == true){
-// 	$personId = $_GET["personId"];
+//include("includes/header.php");
+
+// if(isset($_GET["id"]) == true){
+// 	$id = $_GET["id"];
 // 	include("includes/header.php");
 // }    
 ?>
 
 <?php 
-//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-// $personId = $_POST["personId"];
-// $userArticleId = $_POST["userArticleId"];
-
-// $userId = $_POST["userId"];
 $userId = $_SESSION["id"];
-
 $postId = $_GET["postId"];
-//$articleId = $row["personId"];
-
 $ifLike = $_GET["like"];
-// $userLiked = $_POST["userLiked"];
-//$hasEdited = $_POST["hasEdited"];
 
 //connect
 include("includes/db-connect.php"); 
@@ -29,8 +20,6 @@ include("includes/db-connect.php");
 if ($ifLike == 1) {
     //prepare
     $stmt = $pdo->prepare("INSERT INTO `users-posts` (`id`, `userId`, `postId`) VALUES (NULL, '$userId', '$postId');");
-
-    // INSERT INTO `immnews-user-article` (`userArticleId`, `userId`, `articleId`) VALUES (NULL, '$userId', '$articleId');
 
     if($stmt->execute() == true){
         ?> 
@@ -46,8 +35,6 @@ if ($ifLike == 1) {
 else {
         //prepare
         $stmt = $pdo->prepare("DELETE FROM `users-posts` WHERE `users-posts`.`postId` = $postId AND `users-posts`.`userId` = $userId");
-
-        // $stmt = $pdo->prepare("DELETE FROM `immnews-user-article` WHERE `immnews-user-article`.`userArticleId` = $userArticleId");
         
         if($stmt->execute() == true){
             echo("<p>Deleted</p>");
@@ -59,10 +46,6 @@ else {
             <?php
         }
     }
-
-
-// $stmt = $pdo->prepare("INSERT INTO `immnews-user-article` (`userArticleId`, `userId`, `articleId`) VALUES (NULL, '$userId', '$articleId');");
-
 
 // if($stmt->execute() == true){
 // 	?> 

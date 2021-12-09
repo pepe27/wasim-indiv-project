@@ -16,6 +16,7 @@ $isAdmin = $_SESSION["isAdmin"];
 <h2><a id="showPosts" href="javascript:;">Click to show more posts</a></h2> 
 <!-- do an onclick event -->
 
+<h2><a href="favourites.php">Favourites/Likes</a></h2>
 <section> </section>
 
 
