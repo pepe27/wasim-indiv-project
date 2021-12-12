@@ -55,7 +55,7 @@ include("includes/session-check.php");
         <!-- do an onclick event -->
         <!-- <h2><a id="showPosts" href="javascript:;">Click to show more posts</a></h2>  -->
         <h2><a href="add-post.php">Add Post</a></h2>
-        <h2><a id="favA"href="favourites.php">Favourites</a></h2>
+        <h2><a id="favA"href="favourites.php">Favourites Page</a></h2>
         <!-- <section> </section> -->
 
 
@@ -97,11 +97,11 @@ include("includes/session-check.php");
             //show either like or unlike button, with counter of number of current likes
             if ($userLike){
                 ?> 
-                <a href="process-like.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=0">Unlike(<?php echo("number of like: $likes") ?>)</a>
+                <a class="likeButtons" href="process-like.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=0">Unlike(<?php echo("number of like: $likes") ?>)</a>
                 <?php
             } else {
                 ?>
-                <a href="process-like.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=1">Like(<?php echo("number of like: $likes") ?>)</a>
+                <a class="likeButtons" href="process-like.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=1">Like(<?php echo("number of like: $likes") ?>)</a>
                 <?php 
             }
 
