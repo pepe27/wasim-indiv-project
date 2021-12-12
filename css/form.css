@@ -1,20 +1,20 @@
 /* form.css */
-input {
+form input {
     display: block;
 }
-label{
+form label{
     display: block;
 }
-textarea{
+form textarea{
     display: block;
 }
-button{
+form button{
     display: block;
 }
 
 section[id="loginForm"]{
-    background-color: tan;
-    padding: 3rem;
+    background-color: rgba(255, 100, 100, 0.2);
+    padding: 3vh;
     border-radius: 15px 50px;
     border: .1rem solid black;
 }
