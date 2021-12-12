@@ -85,7 +85,6 @@ button[type="submit"]{
     width:200px;
     height:50px;
     border: transparent;
-    margin-top: 1rem;
     /* padding-top: 1rem; */
 }
 
@@ -141,7 +140,7 @@ box-shadow: 0 5px 0 #1c2a3a;
 color: white;
 cursor: pointer;
 /* font: inherit; */
-margin: 0;
+margin-top: 1rem;
 outline: 0;
 /* padding: 12px 20px; */
 padding-bottom: .5rem;

@@ -65,7 +65,7 @@
         <label for="email">Email</label>
         <input type="text" name="email" required>
         <label for="dob">Dob</label>
-        <input type="text" name="dob" required> <br>
+        <input type="text" name="dob" required>
         <button type="submit">Register</button>
         </form>
     </section>
