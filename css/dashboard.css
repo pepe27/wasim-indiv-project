@@ -88,10 +88,10 @@ input[type="submit"]{
     /* padding-top: 1rem; */
 }
 
-a[href="add-post.php"], a[href="favourites.php"]{
+a[href="add-post.php"], a[id="favA"]{
     background: #6fbedd;
     color:white;
-    font-size: 1.5em;
+    font-size: 1em;
     width:200px;
     height:50px;
     border: transparent;
@@ -113,6 +113,9 @@ a[href="add-post.php"], a[href="favourites.php"]{
     }
   }
 
+.dbOutput{
+    animation: drop-in 1000ms;
+}
 #formSection {
 animation: drop-in 1000ms;
 }
@@ -166,8 +169,8 @@ a[href="add-post.php"], a[id="favA"] {
     /* font: inherit; */
     margin-top: 1rem;
     outline: 0;
-    /* padding: 12px 20px; */
-    padding-bottom: .5rem;
+    padding: 12px 20px;
+    /* padding-bottom: .3rem; */
     transition: all .1s linear;
 }
 
@@ -175,6 +178,11 @@ button:active {
     box-shadow: 0 2px 0 #1c2a3a;
     transform: translateY(3px);
 }
+a[href="add-post.php"]:active, a[id="favA"]:active{
+    box-shadow: 0 2px 0 #1c2a3a;
+    transform: translateY(3px); 
+}
+
 
 /* MORE transitions */
 
@@ -188,6 +196,12 @@ input:hover , select:hover , textarea:hover {
   }
 
 input[type="submit"]:hover {
+    animation: grow-and-shrink 1000ms;
+    animation-iteration-count: 1; 
+    animation-timing-function: ease-in-out;
+}
+
+a[href="add-post.php"]:hover, a[id="favA"]:hover{
     animation: grow-and-shrink 1000ms;
     animation-iteration-count: 1; 
     animation-timing-function: ease-in-out;
