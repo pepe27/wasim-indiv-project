@@ -53,10 +53,10 @@ include("includes/session-check.php");
         ?>
 
         <!-- do an onclick event -->
-        <h2><a id="showPosts" href="javascript:;">Click to show more posts</a></h2> 
+        <!-- <h2><a id="showPosts" href="javascript:;">Click to show more posts</a></h2>  -->
         <h2><a href="add-post.php">Add Post</a></h2>
-        <h2><a href="favourites.php">Favourites/Likes</a></h2>
-        <section> </section>
+        <h2><a id="favA"href="favourites.php">Favourites</a></h2>
+        <!-- <section> </section> -->
 
 
         <?php
@@ -130,7 +130,7 @@ include("includes/session-check.php");
             <!-- one-button click DELETE post -->
             <form method="POST" action="delete-post.php">
             <input type="hidden" name="id" value="<?= $row["id"] ?>">
-            <input type="submit" name="deleteArticle" value="Delete Article">
+            <input type="submit" id="deleteArticle" name="deleteArticle" value="Delete Article">
             </form>
 
             <?php    
