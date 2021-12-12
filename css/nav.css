@@ -55,7 +55,7 @@ nav ul li a{
     display: block;
 }
 nav ul li a:hover{
-    color:#6fbedd;
+    color:rgb(199, 42, 160);
     transform: rotate(8deg);
 }
 

@@ -1,9 +1,10 @@
 footer{
     padding-left: 4rem;
     padding-right: 4rem;
+    padding-bottom: 1rem;
 }
 
-a:hover{
-    color:#6fbedd;
-    transform: rotate(15deg);
+a[id="cookies"]:hover{
+    color:rgb(199, 42, 160);
+    transform: rotate(15deg); /* not working */
 }

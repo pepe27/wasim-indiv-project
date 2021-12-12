@@ -21,11 +21,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- Work Sans font -->
     <link rel="stylesheet" media="screen" href="css/initialize.css">
-    <link rel="stylesheet" media="screen" href="css/base.css">
+    <!-- <link rel="stylesheet" media="screen" href="css/base.css"> -->
+    <link rel="stylesheet" media="screen" href="css/about.css">
     <link rel="stylesheet" media="screen" href="css/nav.css">
-    <link rel="stylesheet" media="screen" href="css/form.css">
+    <link rel="stylesheet" media="screen" href="css/footer.css">
+    <!-- <link rel="stylesheet" media="screen" href="css/form.css">
     <link rel="stylesheet" media="screen and (max-width:480px)" href="css/mobile.css">
-    <link rel="stylesheet" media="screen and (min-width:480px)" href="css/desktop.css">
+    <link rel="stylesheet" media="screen and (min-width:480px)" href="css/desktop.css"> -->
     <title>About Wisp</title>
 
 </head>
