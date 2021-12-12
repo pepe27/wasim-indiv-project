@@ -1,7 +1,7 @@
 nav {
     position: fixed;
     display: flex;
-    height: 8vh;
+    height: 6vh;
     width: 100%;
     background-color: #9892C7;
 
@@ -11,7 +11,7 @@ nav ul {
     /* font-family: 'Dazzle Unicase', sans-serif;  */
     font-family: 'dazzle-unicase', sans-serif;
     /* font-style: normal; */
-    /* flex-direction: column; */
+    flex-direction: column;
 
 }
 
@@ -24,7 +24,7 @@ nav ul li{
 }
 
 #logo{
-    width: 1rem;
+    width: 50px;
     /* display: inline-block; */
     flex: 1;
 
