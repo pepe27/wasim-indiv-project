@@ -3,64 +3,95 @@
 include("includes/session-check.php");
 $id = $_GET["id"];
 // $id = $_POST["id"];
-include("includes/header.php");
-
+// include("includes/header.php");
 ?>
 
-<title>Edit Post</title>
-<h1>Update record #<?= $id ?></h1>
-<h2>Change is good</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="wisp-journal-app">
+    <meta name="keywords" content="wisp,journal,daily-journal">
+    <link rel="author" content="Wisp" href="http://www.wisp-journal.com/" />
+    <link rel="canonical" href="http://www.wisp-journal.com/" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="assets/wisp-favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://use.typekit.net/cqi5tsz.css"> 
+    <!-- Dazzle Unicase font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Work Sans font -->
+    <link rel="stylesheet" media="screen" href="css/initialize.css">
+    <link rel="stylesheet" media="screen" href="css/base.css">
+    <link rel="stylesheet" media="screen" href="css/nav.css">
+    <link rel="stylesheet" media="screen" href="css/form.css">
+    <link rel="stylesheet" media="screen and (max-width:480px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width:480px)" href="css/desktop.css">
+    <title>Edit Post</title>
+</head>
+<body>
+    <?php
+    include("includes/nav.php");
+    ?>
+    <main class="bg">
 
-<!-- <section id="editPostForm">
-<form method="POST" action="process-edit-post.php">
-    <label for="title">Title</label>
-	<input type="text" name="title" placeholder="Untitled">
+    <h1>Update record #<?= $id ?></h1>
+    <h2>Change is good</h2>
 
-    <label for="imageUrl">Image URL</label>
-    <input type="text" name="imageUrl" placeholder="url">
-
-    <label for="text">Text</label>
-    <textarea name="text" id="text" cols="30" rows="10" placeholder="How's your day going?"></textarea> <br>
-   
-	<button type="submit">Edit</button>
-</form>
-</section> -->
-
-
-<?php
-//Preview of record
-//(id,etc.... of a specific article)
-
-//connect
-include("includes/db-connect.php"); 
-
-//prepare
-$stmt = $pdo->prepare("SELECT * FROM `posts` 
-	WHERE `id` = $id");
-
-//execute
-$stmt->execute();
-
-//display the record
-$row = $stmt->fetch();
-?>
-
-<section id="editPostForm">
+    <!-- <section id="editPostForm">
     <form method="POST" action="process-edit-post.php">
-        <input type="hidden" name="id" value="<?= $row["id"] ?>">
-
         <label for="title">Title</label>
-        <input type="text" name="title" value="<?= $row["title"] ?>">
+        <input type="text" name="title" placeholder="Untitled">
 
         <label for="imageUrl">Image URL</label>
-        <input type="text" name="imageUrl" value="<?= $row["imageUrl"] ?>">
+        <input type="text" name="imageUrl" placeholder="url">
 
-        <label for="textBox">Text</label>
-        <textarea name="textBox" id="textBox" cols="30" rows="10" value="<?= $row["textBox"] ?>"></textarea> <br>
-        <!-- <input type="submit"> -->
+        <label for="text">Text</label>
+        <textarea name="text" id="text" cols="30" rows="10" placeholder="How's your day going?"></textarea> <br>
+    
         <button type="submit">Edit</button>
     </form>
-</section>
+    </section> -->
+
+
+    <?php
+    //Preview of record
+    //(id,etc.... of a specific article)
+
+    //connect
+    include("includes/db-connect.php"); 
+
+    //prepare
+    $stmt = $pdo->prepare("SELECT * FROM `posts` 
+        WHERE `id` = $id");
+
+    //execute
+    $stmt->execute();
+
+    //display the record
+    $row = $stmt->fetch();
+    ?>
+
+    <section id="editPostForm">
+        <form method="POST" action="process-edit-post.php">
+            <input type="hidden" name="id" value="<?= $row["id"] ?>">
+
+            <label for="title">Title</label>
+            <input type="text" name="title" value="<?= $row["title"] ?>">
+
+            <label for="imageUrl">Image URL</label>
+            <input type="text" name="imageUrl" value="<?= $row["imageUrl"] ?>">
+
+            <label for="textBox">Text</label>
+            <textarea name="textBox" id="textBox" cols="30" rows="10" value="<?= $row["textBox"] ?>"></textarea> <br>
+            <!-- <input type="submit"> -->
+            <button type="submit">Edit</button>
+        </form>
+    </section>
+    </main>
 
 <?php
 include("includes/footer.php");
