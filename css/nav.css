@@ -2,10 +2,18 @@
 nav {
     position: fixed;
     display: flex;
-    height: 6vh;
+    height: 13vh;
     width: 100%;
-    background-color: #6fbedd;
+    /* background-color: #6fbedd; */
     /* justify-content: space-between; */
+    background-image: 
+        linear-gradient(
+            to right,
+            #6fbedd,
+            #538ea5 95%
+            /* rgb(221, 164, 164) 70% */
+            /* rgb(199, 42, 160) 20% */
+        );
 
 }
 

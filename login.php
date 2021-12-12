@@ -50,9 +50,9 @@
 <section id="loginForm">
 <form action="process-login.php" method="POST">
 <label for="username">Username</label>
-<input type="text" name="username" /> 
+<input type="text" name="username" required/> 
 <label for="password">Password</label>
-<input type="text" name="password" /> <br>
+<input type="password" name="password" required/> <br>
 <button type="submit">Login</button>
 </form>
 <h2>Don't have a place to vent? <a href="register.php">Register</a></h2>
