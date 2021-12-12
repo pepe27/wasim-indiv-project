@@ -56,8 +56,6 @@ section[id="loginForm"]{
     border: .2rem solid #6fbedd;
 }
 
-
-
 section h2 {
     font-size: 1.5rem;
 }
@@ -87,6 +85,7 @@ button[type="submit"]{
     width:200px;
     height:50px;
     border: transparent;
+    margin-top: 1rem;
     /* padding-top: 1rem; */
 }
 

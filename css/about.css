@@ -13,7 +13,7 @@ main{
     /* background-color: rgb(219, 212, 201); */
 }
 
-section[id="about"] {
+/* section[id="about"] {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -22,11 +22,29 @@ section[id="about"] {
     padding-top: 7em;
     margin: auto;
     height: 100%;
+    box-shadow:0px 6px 5px rgba(0, 0, 0,.2);
+} */
     /* margin-top: 3em; */
-    box-shadow:0px 6px 5px rgba(0, 0, 0,.2);  
     /* border-radius: 5px; */
+
+
+section[id="about"]{
+    /* background-color: rgba(236, 108, 225, 0.2); */
+    background-image: 
+        linear-gradient(
+            to right,
+            rgb(221, 164, 164),
+            rgb(202, 74, 170) 99%
+        );
+    padding: 3vh;
+    border-radius: 15px 50px;
+    border: .2rem solid #6fbedd;
+    margin-top: .7rem;
 }
 
+section[id="about"] p {
+    font-weight: 600;
+}
 /* ANIMATION CSS ///////////////////////////////////////*/
 
 @keyframes drop-in {

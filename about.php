@@ -59,12 +59,12 @@
             echo($row["text"]);
             //echo("<br/>");
             ?> 
+            <h2>Don't have a place to vent? <a href="register.php">Register</a></h2>
 
             </section></p><?php    
         }
         ?>
 
-        <h2>Don't have a place to vent? <a href="register.php">Register</a></h2>
 
     </main>
 
