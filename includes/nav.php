@@ -1,7 +1,7 @@
 <!-- style = "padding: 15em 2em 10em;"     -->
 <header>
         <nav>
-            <ul>
+            <ul class="container">
 
                 <!-- <li><a href="admin-dashboard.php">Dashboard</a></li>
 			    <li><a href="logout.php">logout</a></li> -->

@@ -24,6 +24,8 @@
     <link rel="stylesheet" media="screen" href="css/initialize.css">
     <!-- <link rel="stylesheet" media="screen" href="css/base.css"> -->
     <link rel="stylesheet" media="screen" href="css/nav.css">
+    <link rel="stylesheet" media="screen" href="css/footer.css">
+
     <!-- <link rel="stylesheet" media="screen" href="css/form.css"> -->
     <link rel="stylesheet" media="screen" href="css/login.css">
 <!-- 

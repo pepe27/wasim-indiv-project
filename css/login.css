@@ -3,13 +3,14 @@ body {
     /* font-family: 'Montserrat', sans-serif; */
     font-family: 'Work Sans', sans-serif;
     background-color: cornsilk;
+    color:#1c2a3a;
 
 }
 
 /* everything but the nav */
 main{
-    padding-top: 10rem;
-    background-color: rgb(219, 212, 201);
+    padding: 10rem 4rem;
+    /* background-color: rgb(219, 212, 201); */
 }
 
 section {
