@@ -2,6 +2,7 @@
 //delete-post.php
 include("includes/session-check.php");
 //include("includes/header.php");
+//technically didn't need to put html/nav.php bc user doesn't see this page..
 ?>
 
 <!DOCTYPE html>
