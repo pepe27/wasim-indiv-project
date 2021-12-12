@@ -468,15 +468,15 @@ li {
   list-style: none;
 }
 a {
-  color: #9892C7;
+  color: #6fbedd;
   text-decoration: none;
 }
 h1 {
   margin: 0;
 }
 :root {
-  --main-bg: #423F6A;
-  --light-bg: #9892C7;
+  --main-bg: #6fbedd;
+  --light-bg: #bddfec; 
 }
 /* ==========================================================================
    Print styles

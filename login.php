@@ -52,12 +52,13 @@
 <label for="username">Username</label>
 <input type="text" name="username" /> 
 <label for="password">Password</label>
-<input type="text" name="password" /> 
+<input type="text" name="password" /> <br>
 <button type="submit">Login</button>
 </form>
+<h2>Don't have a place to vent? <a href="register.php">Register</a></h2>
+
 </section>
 
-<h2>Don't have a place to vent? <a href="register.php">Register</a></h2>
 </main>
 <?php
 include("includes/footer.php");

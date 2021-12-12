@@ -4,7 +4,7 @@ nav {
     display: flex;
     height: 6vh;
     width: 100%;
-    background-color: #9892C7;
+    background-color: #6fbedd;
     /* justify-content: space-between; */
 
 }
@@ -48,10 +48,100 @@ nav ul li a{
 }
 nav ul li a:hover{
     color:#6fbedd;
+    transform: rotate(8deg);
 }
+
 #logo{
-    width: 70px;
-    /* display: inline-block; */
-    flex: 1;
+    width: 4rem;
+    /* transition: width 2s, height 2s, transform 2s; */
+    background: #dfeaee;
+    border-radius: 1px;
+    transition-property: background, border-radius;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    /* border: solid .05rem #1c2a3a; */
+    animation: slide-in 400ms;
+    animation-timing-function: linear;
+}
+
+#logo:hover{
+    transform: rotate(8deg);
+    background: #6fbedd;
+    border-radius: 50%;
+}
+
+/* CSS ANIMATIONS //////////////////////////// */
+@keyframes grow-and-shrink {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+@keyframes grow-and-shrink1 {
+0% {
+    transform: scale(1);
+}
+50% {
+    transform: scale(1.05);
+}
+100% {
+    transform: scale(1);
+}
+}
+
+#profile:hover {
+    animation: grow-and-shrink 1000ms;
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;
+    color: #59567c;
+    font-weight: 900;
+    font-size: 3.1rem;
+    background-color: #423F6A;
+    box-shadow:0px 6px 5px rgba(0, 0, 0,.2);  
 
 }
+
+li a[href="logout.php"]:hover,li a[href="index.php"]:hover ,li a[href="group.php"]:hover {
+    animation: grow-and-shrink1 1000ms;
+    animation-iteration-count: 1; 
+    animation-timing-function: ease-in-out;
+    border-radius: 1rem;
+    box-shadow:0px 6px 5px rgba(0, 0, 0,.2);  
+
+}
+
+@keyframes drop-in {
+    from {
+      transform:
+        rotate(-10deg) translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform:
+        rotate(0deg) translateY(0%);
+      opacity: 1;
+    }
+  }
+
+nav {
+animation: drop-in 700ms;
+}
+
+nav:hover {
+    background-color: #7e78b8;
+}
+
+#logo:hover{
+    animation: grow-and-shrink 1000ms;
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;
+    box-shadow:0px 6px 5px rgba(0, 0, 0,.2);  
+
+}
+

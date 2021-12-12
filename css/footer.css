@@ -1,5 +1,9 @@
 footer{
     padding-left: 4rem;
     padding-right: 4rem;
+}
 
+a:hover{
+    color:#6fbedd;
+    transform: rotate(15deg);
 }

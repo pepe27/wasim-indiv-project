@@ -50,7 +50,114 @@ section[id="loginForm"]{
     border: .1rem solid black;
 }
 
+section h2 {
+    font-size: 1.5rem;
+}
+section h2 a:hover {
+    color:#bddfec;
+
+}
+
+section label {
+    font-weight: 700;
+}
 form{
     /* font-family: 'Montserrat', sans-serif; */
     font-family: 'Work Sans', sans-serif;
+}
+
+input {
+    font-size: 1.5rem;
+    border: 1px solid rgb(153,153,153);
+    border-radius: 4px;
+}
+
+button[type="submit"]{
+    background: #6fbedd;
+    color:white;
+    font-size: 2em;
+    width:200px;
+    height:50px;
+    border: transparent;
+    /* padding-top: 1rem; */
+}
+
+/* ANIMATION CSS ///////////////////////////////////////*/
+
+@keyframes drop-in {
+    from {
+      transform:
+        rotate(-30deg) translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform:
+        rotate(0deg) translateY(0%);
+      opacity: 1;
+    }
+  }
+
+#formSection {
+animation: drop-in 1000ms;
+}
+h1, h2, h2 a,label, section[id="loginForm"]{
+    animation: drop-in 1500ms;
+}
+
+/* button[type="submit"]{
+animation: drop-in 2000ms;
+} */
+
+@keyframes grow-and-shrink {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+/* button[type="submit"] {
+animation: grow-and-shrink 4000ms;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+} */
+
+button[type="submit"] {
+border: 0;
+/* background: #0087cc; */
+border-radius: 4px;
+box-shadow: 0 5px 0 #1c2a3a;
+color: white;
+cursor: pointer;
+/* font: inherit; */
+margin: 0;
+outline: 0;
+/* padding: 12px 20px; */
+padding-bottom: .5rem;
+transition: all .1s linear;
+}
+button:active {
+box-shadow: 0 2px 0 #1c2a3a;
+transform: translateY(3px);
+}
+
+/* MORE transitions */
+
+input:hover , select:hover , textarea:hover {
+    background: #bddfec;
+    animation: grow-and-shrink 1000ms;
+    animation-iteration-count: 1; 
+    /* infinite */
+    animation-timing-function: ease-in-out;
+
+  }
+
+button[type="submit"]:hover {
+    animation: grow-and-shrink 1000ms;
+    animation-iteration-count: 1; 
+    animation-timing-function: ease-in-out;
 }
