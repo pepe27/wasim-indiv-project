@@ -57,7 +57,7 @@
                     echo ("<li><a href='about.php'>About</a></li>");
                     echo ("<li><a href='contact.php'>Contact</a><li>");
                     echo ("<li><a href='dashboard.php'>Dashboard</a></li>");
-                    echo("<li><a href='favourites.php'>Favourites</a></li>");
+                    echo("<li><a href='favourites-ajax.php'>Favourites</a></li>");
                     echo("<li><a href='logout.php'>Logout</a></li>");
                 }
 

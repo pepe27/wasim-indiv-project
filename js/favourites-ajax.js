@@ -20,20 +20,24 @@ function showAnimals(event){
                 var output = document.querySelectorAll("#output")[0];
                 for(var i=0; i<response.length; i++){
                     var picDiv = document.createElement("div");
+                    picDiv.setAttribute("class", "picDiv");
                     picDiv.innerHTML = response[i].id;
     
                     var picImg = document.createElement("img");
                     picImg.setAttribute("id", response[i].id);
                     picImg.setAttribute("src", response[i].imageUrl);
-                    picImg.setAttribute("width", "200");
+                    picImg.setAttribute("width", "50%");
+                    //picImg.setAttribute("border-radius", "15px 50"px); doesn't work here, works in css file
     
                     var picP = document.createElement("p");
                     var picPText = document.createTextNode(response[i].textBox);
                     picP.appendChild(picPText);
     
+                    picDiv.appendChild(picImg);
+                    picDiv.appendChild(picP);
+
                     output.appendChild(picDiv);
-                    output.appendChild(picImg);
-                    output.appendChild(picP);
+
     
                 }
     
