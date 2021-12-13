@@ -148,6 +148,7 @@ include("includes/session-check.php");
         </div>
         </aside>
     </main>
+<script src="js/table.js"></script>    
 <?php
 include("includes/footer.php");
 ?>
