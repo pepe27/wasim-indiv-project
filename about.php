@@ -34,6 +34,7 @@
 <body>
     <?php
     include("includes/nav.php");
+    include("includes/toggle.php"); //!!!!!!! THIS ISN"T ON EVERY PAGE YET
     ?>
     <main class="bg">
         <h1>Brevity is the soul of wit</h1>
