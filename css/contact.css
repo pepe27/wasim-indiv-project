@@ -45,6 +45,15 @@ form button{
 
 section[id="formStatus"]{
     display:none;
+    background-image: 
+    linear-gradient(
+        to right,
+        rgb(221, 164, 164),
+        rgb(199, 42, 160) 99%
+    );
+    padding: 3vh;
+    border-radius: 15px 50px;
+    border: .2rem solid #6fbedd;
 }
 
 section[id="contactForm"]{
@@ -82,7 +91,7 @@ input, textarea {
     border-radius: 4px;
 }
 
-input[type="submit"]{
+input[type="submit"], input[value='Go Back']{
     background: #6fbedd;
     color:white;
     font-size: 2em;
@@ -137,7 +146,7 @@ animation-iteration-count: infinite;
 animation-timing-function: ease-in-out;
 } */
 
-input[type="submit"] {
+input[type="submit"], input[value='Go Back'] {
 border: 0;
 /* background: #0087cc; */
 border-radius: 4px;
@@ -151,7 +160,7 @@ outline: 0;
 padding-bottom: .5rem;
 transition: all .1s linear;
 }
-input[type="submit"]:active {
+input[type="submit"]:active, input[value='Go Back']:active {
 box-shadow: 0 2px 0 #1c2a3a;
 transform: translateY(3px);
 }
@@ -171,7 +180,7 @@ input[type="text"]:hover, input[type="email"]:hover, select:hover, textarea:hove
 
   }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover , input[value='Go Back']:hover {
     animation: grow-and-shrink 1000ms;
     animation-iteration-count: 1; 
     animation-timing-function: ease-in-out;

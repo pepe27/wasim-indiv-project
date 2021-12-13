@@ -4,6 +4,7 @@ console.log("contact-ajax.js connected");
 /////////////////////////////////////////
 //formStatus ajaxForm name email message
 let formStatus = document.querySelectorAll("#formStatus")[0];
+let contactForm = document.querySelectorAll("#contactForm")[0];
 let ajaxForm = document.querySelectorAll("#ajaxForm")[0];
 let name1 = document.querySelectorAll("#name1")[0];
 let email = document.querySelectorAll("#email")[0];
@@ -30,6 +31,8 @@ function doSomething(e){
             var response = JSON.parse(xhr.responseText);  
 			//DOM Manipulation
 			if(response.success) {
+				contactForm.setAttribute("style","display:none");
+				formStatus.setAttribute("style","display:inline-block");
                 formStatus.innerHTML = "Thanks for submitting your form! <input type='button' value='Go Back' onclick='history.back(-1)' />";
                 ajaxForm.remove(); //can do as well
             }
