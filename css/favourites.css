@@ -56,6 +56,9 @@ section[class="dbOutput"]{
     border: .2rem solid #6fbedd;
 }
 
+/* section[class="dbOutput"] a {
+    color: white;
+} */
 section h2 {
     font-size: 1.5rem;
 }
