@@ -54,8 +54,10 @@ include("includes/session-check.php");
 
         <!-- do an onclick event -->
         <!-- <h2><a id="showPosts" href="javascript:;">Click to show more posts</a></h2>  -->
+        <section id="dbLinks">
         <h2><a href="add-post.php">Add Post</a></h2>
         <h2><a id="favA"href="favourites.php">Favourites Page</a></h2>
+        </section>
         <!-- <section> </section> -->
 
 
