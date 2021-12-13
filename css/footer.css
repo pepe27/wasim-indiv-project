@@ -4,7 +4,11 @@ footer{
     padding-bottom: 1rem;
 }
 
-a[id="cookies"]:hover{
+#cookies:hover{
     color:rgb(199, 42, 160);
     transform: rotate(15deg); /* not working */
+}
+
+#cookies{
+    background-color: darkcyan;
 }
