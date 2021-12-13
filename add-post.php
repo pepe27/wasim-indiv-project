@@ -56,9 +56,10 @@ include("includes/session-check.php");
             <textarea name="textBox" id="textBox" cols="30" rows="10" placeholder="How's your day going?"></textarea> <br>
         <!-- hidden userId value -->
             <input type="hidden" name="userId" value="<?= $_SESSION["id"] ?>">
-        
+            <div id="addButtons">
             <button type="submit">Post</button>
-            <button type="reset">Reset</button> 
+            <button type="reset">Reset</button>
+            </div> 
         </form>
         </section>
 

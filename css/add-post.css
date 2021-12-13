@@ -55,7 +55,10 @@ section[id="addPostForm"]{
     border-radius: 15px 50px;
     border: .2rem solid #6fbedd;
 }
-
+div[id="addButtons"] {
+    display: flex;
+    justify-content:flex-start;
+}
 section h2 {
     font-size: 1.5rem;
 }
@@ -78,13 +81,14 @@ input {
     border-radius: 4px;
 }
 
-input[type="submit"]{
+button[type="submit"]{
     background: #6fbedd;
     color:white;
     font-size: 1.5em;
     width:200px;
     height:50px;
     border: transparent;
+    margin-right:1rem;
     /* padding-top: 1rem; */
 }
 
@@ -129,7 +133,7 @@ a[id="favA"] {
 #formSection {
 animation: drop-in 1000ms;
 }
-h1, h2, h2 a,label, section[id="loginForm"]{
+h1, h2, h2 a,label, section[id="addPostForm"]{
     animation: drop-in 1500ms;
 }
 
@@ -155,7 +159,7 @@ animation-iteration-count: infinite;
 animation-timing-function: ease-in-out;
 } */
 
-input[type="submit"] {
+button[type="submit"] {
     border: 0;
     /* background: #0087cc; */
     border-radius: 4px;
@@ -206,7 +210,7 @@ input:hover , select:hover , textarea:hover {
 
   }
 
-input[type="submit"]:hover {
+button[type="submit"]:hover, button[type="reset"]:hover{
     animation: grow-and-shrink 1000ms;
     animation-iteration-count: 1; 
     animation-timing-function: ease-in-out;
