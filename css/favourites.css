@@ -29,7 +29,7 @@ section[id="output"] {
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 50%;
+    width: 70%;
     padding:3em 3em;
     padding-top: 7em;
     margin: auto;
@@ -55,13 +55,13 @@ form button{
     display: block;
 }
 
-section[class="dbOutput"]{
+section[class="dbOutput"],section[id="output"]{
     /* background-color: rgba(236, 108, 225, 0.2); */
     background-image: 
         linear-gradient(
             to right,
             rgb(221, 164, 164),
-            rgb(199, 42, 160) 90%
+            rgb(224, 159, 208) 90%
         );
     padding: 3vh;
     border-radius: 15px 50px;

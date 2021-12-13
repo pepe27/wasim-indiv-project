@@ -59,6 +59,57 @@ include("includes/session-check.php");
     <h2><a id="showData" href="javascript:;">Load Posts</a></h2>
     <section id="output"></section>
 
+    <?php
+    //retrieve and display posts @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    //connect
+    include("includes/db-connect.php"); 
+
+    //prepare
+    //only show the Posts the Current User has Liked
+    $stmt = $pdo->prepare("SELECT `posts`.* FROM `posts` , `users-posts` WHERE `posts`.`id` = `users-posts`.`postId`;"); 
+
+    //////////////////////////////////
+    // $currentUser = $pdo->prepare("SELECT * FROM `users-posts` WHERE userId='$id'");
+
+    //execute
+    $stmt->execute();
+    // $currentUser->execute();
+
+    //display results
+
+    while($row = $stmt->fetch()) { 
+
+        $postId = $row["id"]; ////////////This is the LIKE functionality code.
+        
+        //count number of likes on post   userId   postId 	
+        $st = $pdo->prepare("SELECT * FROM `users-posts` WHERE `users-posts`.`postId` = $postId;");
+        $st->execute();
+        $like = $st -> fetchAll();
+        $likes = count($like);
+
+        $user = $pdo->prepare("SELECT * FROM `users-posts` WHERE `users-posts`.`userId` = $id AND `users-posts`.`postId` = $postId");
+        $user->execute();
+        $userLike = $user->fetch();
+
+        //show either like or unlike button, with counter of number of current likes. Note: update-like-fav.php does not redirect to dashboard.php
+        if ($userLike){
+            ?> 
+            <a href="process-like-fav.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=0">Unfavourite(<?php echo("number of favs: $likes") ?>)</a>
+            <?php
+        } else {
+            ?>
+            <a href="process-like-fav.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=1">Favourite(<?php echo("number of favs: $likes") ?>)</a>
+            <?php 
+        }
+
+
+        //////////////////////////////////
+        ?> 
+
+        <?php    
+    }
+    ?>
+
     <!-- <section></section> -->
     <!-- HOW TO IMPLEMENT? LOOK AT THE A1/A2 CODE FOR LIKES / SET FEATURED ARTICLE (except CAN have multiple favourite? How to design the DB??) -->
 
