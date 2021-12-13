@@ -56,7 +56,7 @@ include("includes/session-check.php");
     ?>
 
     <!-- AJAX THINGS@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-    <div id="showData">Load the data</div>
+    <h2><a id="showData" href="javascript:;">Load Posts</a></h2>
     <section id="output"></section>
 
     <!-- <section></section> -->

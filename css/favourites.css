@@ -103,7 +103,7 @@ input[type="submit"]{
     /* padding-top: 1rem; */
 }
 
-a[href="add-post.php"],a[class="likeButtons"]{
+a[href="add-post.php"],a[class="likeButtons"], a[id="showData"]{
     background: #6fbedd;
     color:white;
     font-size: 1em;
@@ -112,17 +112,6 @@ a[href="add-post.php"],a[class="likeButtons"]{
     border: transparent;
     /* padding-top: 1rem; */
 }
-
-a[id="favA"] {
-    background: #6fbedd;
-    color:white;
-    font-size: .8em;
-    width:200px;
-    height:50px;
-    border: transparent;
-    /* padding-top: 1rem; */
-}
-
 /* ANIMATION CSS ///////////////////////////////////////*/
 
 @keyframes drop-in {
@@ -184,7 +173,7 @@ input[type="submit"] {
     padding-bottom: .5rem;
     transition: all .1s linear;
 }
-a[href="add-post.php"], a[id="favA"],a[class="likeButtons"] {
+a[href="add-post.php"], a[id="favA"],a[class="likeButtons"],a[id="showData"] {
     border: 0;
     /* background: #0087cc; */
     border-radius: 4px;
@@ -204,7 +193,7 @@ button:active {
     box-shadow: 0 2px 0 #1c2a3a;
     transform: translateY(3px);
 }
-a[href="add-post.php"]:active, a[id="favA"]:active, a[class="likeButtons"]:active {
+a[href="add-post.php"]:active, a[id="favA"]:active, a[class="likeButtons"]:active, a[id="showData"]:active {
     box-shadow: 0 2px 0 #1c2a3a;
     transform: translateY(3px); 
 }
@@ -227,7 +216,7 @@ input[type="submit"]:hover {
     animation-timing-function: ease-in-out;
 }
 
-a[href="add-post.php"]:hover, a[id="favA"]:hover, a[class="likeButtons"]:hover {
+a[href="add-post.php"]:hover, a[id="favA"]:hover, a[class="likeButtons"]:hover, a[id="showData"]:hover {
     animation: grow-and-shrink 1000ms;
     animation-iteration-count: 1; 
     animation-timing-function: ease-in-out;

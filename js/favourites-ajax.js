@@ -40,7 +40,7 @@ function showAnimals(event){
         } 
     };
     
-        //if this "favourites-ajax.php" doesn't work, might need to have only the php stuff in there. no html stuff?? NEW: fav-ajax-only.php
+        //Note:"favourites-ajax.php" doesn't work, can ONLY have php stuff in file. No html stuff. NEW: fav-ajax-only.php
     xhr.open("GET", "fav-ajax-only.php", true); //true means it is asynchronous // Send variables through the url
     xhr.send(); 
 
