@@ -54,10 +54,10 @@ include("includes/session-check.php");
 
         <!-- do an onclick event -->
         <!-- <h2><a id="showPosts" href="javascript:;">Click to show more posts</a></h2>  -->
-        <section id="dbLinks">
+        <div id="dbLinks">
         <h2><a href="add-post.php">Add Post</a></h2>
         <h2><a id="favA"href="favourites.php">Favourites Page</a></h2>
-        </section>
+        </div>
         <!-- <section> </section> -->
 
 
@@ -99,14 +99,14 @@ include("includes/session-check.php");
             //show either like or unlike button, with counter of number of current likes
             if ($userLike){
                 ?> 
-                <a class="likeButtons" href="process-like.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=0">Unlike(<?php echo("number of like: $likes") ?>)</a>
+                <a class="likeButtons" href="process-like.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=0">Unfavourite(<?php echo("number of favs: $likes") ?>)</a>
                 <?php
             } else {
                 ?>
-                <a class="likeButtons" href="process-like.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=1">Like(<?php echo("number of like: $likes") ?>)</a>
+                <a class="likeButtons" href="process-like.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=1">Favourite(<?php echo("number of favs: $likes") ?>)</a>
                 <?php 
             }
-
+       
 
             //////////////////////////////////
             ?> 
@@ -127,7 +127,7 @@ include("includes/session-check.php");
             </section>
             <!-- </p> -->
             <!-- EDIT -->
-            <a href="edit-post.php?id=<?php echo($row["id"]); ?>">Edit Entry</a>
+            <a id="editPost" href="edit-post.php?id=<?php echo($row["id"]); ?>">Edit Entry</a>
 
             <!-- one-button click DELETE post -->
             <form method="POST" action="delete-post.php">

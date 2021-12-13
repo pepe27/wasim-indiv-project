@@ -43,7 +43,7 @@ form button{
     display: block;
 }
 
-section[class="dbOutput"]{
+section[id="addPostForm"]{
     /* background-color: rgba(236, 108, 225, 0.2); */
     background-image: 
         linear-gradient(
