@@ -43,7 +43,7 @@ form button{
     display: block;
 }
 
-section[class="dbOutput"]{
+section[id="editPostForm"]{
     /* background-color: rgba(236, 108, 225, 0.2); */
     background-image: 
         linear-gradient(
@@ -78,7 +78,7 @@ input {
     border-radius: 4px;
 }
 
-input[type="submit"]{
+button[type="submit"]{
     background: #6fbedd;
     color:white;
     font-size: 1.5em;
@@ -155,7 +155,7 @@ animation-iteration-count: infinite;
 animation-timing-function: ease-in-out;
 } */
 
-input[type="submit"] {
+button[type="submit"] {
     border: 0;
     /* background: #0087cc; */
     border-radius: 4px;
@@ -206,7 +206,7 @@ input:hover , select:hover , textarea:hover {
 
   }
 
-input[type="submit"]:hover {
+  button[type="submit"]:hover {
     animation: grow-and-shrink 1000ms;
     animation-iteration-count: 1; 
     animation-timing-function: ease-in-out;

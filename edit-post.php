@@ -88,7 +88,7 @@ $id = $_GET["id"];
             <input type="text" name="imageUrl" value="<?= $row["imageUrl"] ?>">
 
             <label for="textBox">Text</label>
-            <textarea name="textBox" id="textBox" cols="30" rows="10" value="<?= $row["textBox"] ?>"></textarea> <br>
+            <textarea name="textBox" id="textBox" cols="30" rows="10" value="<?= $row["textBox"] ?>"></textarea>
             <!-- <input type="submit"> -->
             <button type="submit">Edit</button>
         </form>
