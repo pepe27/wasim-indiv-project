@@ -36,7 +36,7 @@
 <body>
     <?php
     include("includes/nav.php");
-    include("includes/toggle.php"); //!!!!!!!
+    include("includes/toggle.php"); //!!!!!!! THIS ISN"T ON EVERY PAGE YET
 
     ?>
 <main class="bg">
