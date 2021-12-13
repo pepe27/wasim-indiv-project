@@ -185,7 +185,7 @@ main {
     background-blend-mode: 
       difference, 
       overlay;
-    animation-duration: 3s;
+    animation-duration: 6s;
     animation-name: background-color-animation;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -195,10 +195,10 @@ main {
   
   @keyframes background-color-animation {
     from {
-      background-color: red;
+      background-color: rgb(211, 85, 85);
     }
   
     to {
-      background-color: blue;
+      background-color: rgb(75, 118, 211);
     }
   }
