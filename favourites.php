@@ -53,7 +53,7 @@ include("includes/session-check.php");
         echo ("<h2>$line</h2>");
     ?>
 
-    <section></section>
+    <!-- <section></section> -->
     <!-- HOW TO IMPLEMENT? LOOK AT THE A1/A2 CODE FOR LIKES / SET FEATURED ARTICLE (except CAN have multiple favourite? How to design the DB??) -->
 
     <?php
@@ -91,19 +91,18 @@ include("includes/session-check.php");
         //show either like or unlike button, with counter of number of current likes. Note: update-like-fav.php does not redirect to dashboard.php
         if ($userLike){
             ?> 
-            <a href="process-like-fav.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=0">Unlike(<?php echo("number of like: $likes") ?>)</a>
+            <a href="process-like-fav.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=0">Unfavourite(<?php echo("number of favs: $likes") ?>)</a>
             <?php
         } else {
             ?>
-            <a href="process-like-fav.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=1">Like(<?php echo("number of like: $likes") ?>)</a>
+            <a href="process-like-fav.php?userId=<?= $_SESSION["id"]; ?>&postId=<?= $row["id"]; ?> &like=1">Favourite(<?php echo("number of favs: $likes") ?>)</a>
             <?php 
         }
 
 
         //////////////////////////////////
         ?> 
-        <p>
-        
+        <section class="dbOutput">
         <?php
         echo($row["id"]);
         echo("<br/>");
@@ -116,7 +115,7 @@ include("includes/session-check.php");
         echo($row["textBox"]);
         echo("<br/>");
         ?>
-        </p>  
+        </section>
         <?php    
     }
     ?>
