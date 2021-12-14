@@ -63,7 +63,7 @@ include("includes/session-check.php");
         //execute
         //$stmt->execute(); 
         
-        
+        //error handlings don't work :(
         if(empty($stmt)){
             ?><p>No matching results found </p>
             <a href="search.php">Back to Search</a>
@@ -83,8 +83,9 @@ include("includes/session-check.php");
                 echo($row["title"]);
                 echo("<br/>");
                 echo($row["date"]);
-                echo("<br/>");
-                echo($row["imageUrl"]);
+                echo("<br/>"); ?> 
+                <img width="300" src="<?php echo($row['imageUrl'])  ?>"/><?php
+                //echo('<img src='$row['imageUrl']' width='300'>');
                 echo("<br/>");
                 echo($row["textBox"]);
                 echo("<br/>");
