@@ -61,33 +61,44 @@ include("includes/session-check.php");
         $stmt = $pdo->prepare("SELECT * FROM `posts`
             WHERE `title` LIKE '%$searchTerm%';");
         //execute
-        $stmt->execute(); 
+        //$stmt->execute(); 
+        
+        
+        if(empty($stmt)){
+            ?><p>No matching results found </p>
+            <a href="search.php">Back to Search</a>
+            <?php
+            exit();
+        }; 
 
-        //display
-        while($row = $stmt->fetch()) { 
+        if ($stmt->execute()) {
+
+            //display
+            while($row = $stmt->fetch()) { 
+                ?> 
+                <section class="dbOutput">
+                <?php    
+                echo($row["id"]);
+                echo("<br/>");
+                echo($row["title"]);
+                echo("<br/>");
+                echo($row["date"]);
+                echo("<br/>");
+                echo($row["imageUrl"]);
+                echo("<br/>");
+                echo($row["textBox"]);
+                echo("<br/>");
+                echo($row["userId"]);
+                echo("<br/>");  
+            }
             ?>
-            <section class="dbOutput">
-            <?php    
-            echo($row["id"]);
-            echo("<br/>");
-            echo($row["title"]);
-            echo("<br/>");
-            echo($row["date"]);
-            echo("<br/>");
-            echo($row["imageUrl"]);
-            echo("<br/>");
-            echo($row["textBox"]);
-            echo("<br/>");
-            echo($row["userId"]);
-            echo("<br/>");  
-        }
-        ?></section>
-
+            </section> <?php
+        } else { ?>
+            <p>error, please try again, <a href="search.php">go back</a>.</p>
+            <?php
+            } ?>
     </main>
 
 <?php
 include("includes/footer.php");
 ?>
-
-
-

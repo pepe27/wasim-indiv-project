@@ -56,7 +56,7 @@ include("includes/session-check.php");
         <section class="dbOutput">
         <p>Please enter a word from the Post title:</p>
             <form action="process-search.php" method="GET">
-            <input type="text" name="searchTerm">
+            <input type="text" name="searchTerm" required>
                 <input type="submit">
             </form>
         </section>
