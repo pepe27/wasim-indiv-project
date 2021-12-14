@@ -40,7 +40,6 @@ include("includes/session-check.php");
     ?>
     <main class="bg">
 
-
         <?php
         $id = $_SESSION["id"];
         $isAdmin = $_SESSION["isAdmin"];
@@ -54,8 +53,6 @@ include("includes/session-check.php");
             echo ("<h2>$line</h2>");
         ?>
 
-        <div id="dbLinks"> </div>
-
         <?php
         $searchTerm = $_GET["searchTerm"];
 
@@ -68,7 +65,9 @@ include("includes/session-check.php");
 
         //display
         while($row = $stmt->fetch()) { 
-            ?><p><?php    
+            ?>
+            <section class="dbOutput">
+            <?php    
             echo($row["id"]);
             echo("<br/>");
             echo($row["title"]);
@@ -82,7 +81,7 @@ include("includes/session-check.php");
             echo($row["userId"]);
             echo("<br/>");  
         }
-        ?></p>
+        ?></section>
 
     </main>
 

@@ -53,12 +53,13 @@ include("includes/session-check.php");
             echo ("<h2>$line</h2>");
         ?>
 
-        <p>Please enter the Post name</p>
-        <form action="process-search.php" method="GET">
-        <input type="text" name="searchTerm">
-            <input type="submit">
-        </form>
-
+        <section class="dbOutput">
+        <p>Please enter a word from the Post title:</p>
+            <form action="process-search.php" method="GET">
+            <input type="text" name="searchTerm">
+                <input type="submit">
+            </form>
+        </section>
         <div id="dbLinks"> </div>
 
     </main>
