@@ -101,6 +101,14 @@ a[href="add-post.php"],a[class="likeButtons"]{
 a[href="add-post.php"]{
     margin-right:1rem
 }
+a[class="likeButtons"]{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+a[id="editPost"]{
+    font-size: 1.5rem;
+}
 
 a[id="favA"] {
     background: #6fbedd;
