@@ -89,6 +89,7 @@ section[class="dbOutput"],section[id="output"]{
     padding: 3vh;
     border-radius: 15px 50px;
     border: .2rem solid #6fbedd;
+    display: none;
 }
 
 /* section[class="dbOutput"] a {

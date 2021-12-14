@@ -120,7 +120,8 @@ include("includes/session-check.php");
             echo("<br/>");
             echo($row["date"]);
             echo("<br/>");
-            echo($row["imageUrl"]);
+            ?> <img width="300" src="<?php echo($row['imageUrl'])  ?>"/> <?php
+            //echo($row["imageUrl"]);
             echo("<br/>");
             echo($row["textBox"]);
             echo("<br/>");

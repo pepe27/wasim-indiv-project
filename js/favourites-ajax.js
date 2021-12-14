@@ -18,7 +18,11 @@ function showAnimals(event){
                 //console.log(response);
     
                 var output = document.querySelectorAll("#output")[0];
+                output.setAttribute("style","display:flex;");
+
                 for(var i=0; i<response.length; i++){
+                    // output.setAttribute("display", block);
+
                     var picDiv = document.createElement("div");
                     picDiv.setAttribute("class", "picDiv");
                     picDiv.innerHTML = response[i].id;
@@ -37,6 +41,7 @@ function showAnimals(event){
                     picDiv.appendChild(picP);
 
                     output.appendChild(picDiv);
+
 
     
                 }
