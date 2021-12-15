@@ -7,6 +7,7 @@ include("includes/session-check.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php include("includes/metadata.php"); ?>
     <meta charset="UTF-8">
     <meta name="description" content="wisp-journal-app">
     <meta name="keywords" content="wisp,journal,daily-journal">
