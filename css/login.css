@@ -211,18 +211,32 @@ main {
 
 .high-contrast-p{
   font-weight:bolder; 
-  line-height: 1.5em; 
-  font-size: larger;  
+  line-height: 1.5em;
+  font-size: 1.5rem; 
+  /* font-size: larger;   */
   letter-spacing: 2px; 
   padding: 1em 2em 1em;
 }
 
 .high-contrast-a{
-  font-size: larger; font-weight:bolder; background-color: yellow;
+  font-size: 1.5rem;
+  /* font-size: larger;  */
+  font-weight:bolder; 
+  background-color: yellow;
 }
 .high-contrast-form{
   background-color: red;
 }
 .high-contrast-input{
   font-size: larger; font-weight:bolder;
+}
+
+.high-contrast-section{
+  background-color: white;
+  font-size: 1.5rem;
+}
+
+.high-contrast-main{
+  font-size: 1.5rem;
+  background-color: white;
 }

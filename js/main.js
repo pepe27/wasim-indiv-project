@@ -38,11 +38,18 @@ function acceptCookies (e) {
 
 
 let toggle = document.querySelectorAll("#toggle")[0];
-let body = document.querySelector("body");
+
+let body = document.querySelector("main[class='bg']");
 let p = document.querySelectorAll("p");
 let a = document.querySelectorAll("a");
 let form = document.querySelectorAll("form");
 let input = document.querySelectorAll("input");
+
+let main = document.querySelectorAll("main");
+let section = document.querySelectorAll("section");
+
+
+
 
 toggle.addEventListener("click",readAssist);
 
@@ -54,13 +61,19 @@ function readAssist(e) {
             p[i].classList.add('high-contrast-p');
         }
         for (let i=0;i<a.length;i++) {
-            a[i].classList.add('high-contrast-p');
+            a[i].classList.add('high-contrast-a');
         }
         for (let i=0;i<form.length;i++) {
-            form[i].classList.add('high-contrast-p');
+            form[i].classList.add('high-contrast-form');
         }
         for (let i=0;i<input.length;i++) {
-            input[i].classList.add('high-contrast-p');
+            input[i].classList.add('high-contrast-input');
+        }
+        for (let i=0;i<section.length;i++) {
+            section[i].classList.add('high-contrast-section');
+        }
+        for (let i=0;i<main.length;i++) {
+            main[i].classList.add('high-contrast-main');
         }
     } else {
         body.classList.remove('high-contrast-body');
@@ -68,13 +81,19 @@ function readAssist(e) {
             p[i].classList.remove('high-contrast-p');
         }
         for (let i=0;i<a.length;i++) {
-            a[i].classList.remove('high-contrast-p');
+            a[i].classList.remove('high-contrast-a');
         }
         for (let i=0;i<form.length;i++) {
-            form[i].classList.remove('high-contrast-p');
+            form[i].classList.remove('high-contrast-form');
         }
         for (let i=0;i<input.length;i++) {
-            input[i].classList.remove('high-contrast-p');
+            input[i].classList.remove('high-contrast-input');
+        }
+        for (let i=0;i<section.length;i++) {
+            section[i].classList.remove('high-contrast-section');
+        }
+        for (let i=0;i<main.length;i++) {
+            main[i].classList.remove('high-contrast-main');
         }
 
 

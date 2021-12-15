@@ -9,7 +9,7 @@ body {
 
 /* everything but the nav */
 main{
-    padding: 10rem 4rem;
+    padding: 15rem 4rem;
     /* background-color: rgb(219, 212, 201); */
 }
 
@@ -36,7 +36,8 @@ section[id="about"]{
             rgb(221, 164, 164),
             rgb(202, 74, 170) 99%
         );
-    padding: 3vh;
+    padding-top: 10vh;
+    padding: 6vh;
     border-radius: 15px 50px;
     border: .2rem solid #6fbedd;
     margin-top: .7rem;
@@ -123,4 +124,42 @@ button[type="submit"]:hover {
     animation: grow-and-shrink 1000ms;
     animation-iteration-count: 1; 
     animation-timing-function: ease-in-out;
+}
+
+/* High Contrast CSS //////////////////////////////////// */
+.high-contrast-body{
+  background-color: white; 
+  padding: 20em 2em 10em;
+}
+
+.high-contrast-p{
+  font-weight:bolder; 
+  line-height: 1.5em;
+  font-size: 1.5rem; 
+  /* font-size: larger;   */
+  letter-spacing: 2px; 
+  padding: 1em 2em 1em;
+}
+
+.high-contrast-a{
+  font-size: 1.5rem;
+  /* font-size: larger;  */
+  font-weight:bolder; 
+  background-color: yellow;
+}
+.high-contrast-form{
+  background-color: red;
+}
+.high-contrast-input{
+  font-size: larger; font-weight:bolder;
+}
+
+.high-contrast-section{
+  background-color: white;
+  font-size: 1.5rem;
+}
+
+.high-contrast-main{
+  font-size: 1.5rem;
+  background-color: white;
 }
